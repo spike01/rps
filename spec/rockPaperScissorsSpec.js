@@ -19,7 +19,7 @@ describe("Rock-Paper-Scissors", function() {
         expect(game.winner()).toBe(player1);
       });
 
-      xit('should beat lizard', function() {
+      it('should beat lizard', function() {
         player1.picks('rock');
         player2.picks('lizard');
         expect(game.winner()).toBe(player1);
@@ -31,7 +31,7 @@ describe("Rock-Paper-Scissors", function() {
         expect(game.winner()).toBe(player2);
       });
 
-      xit('should lose to spock', function() {
+      it('should lose to spock', function() {
         player1.picks('rock');
         player2.picks('spock');
         expect(game.winner()).toBe(player2);
@@ -46,7 +46,7 @@ describe("Rock-Paper-Scissors", function() {
         expect(game.winner()).toBe(player1);
       });
 
-      xit('should beat spock', function() {
+      it('should beat spock', function() {
         player1.picks('paper');
         player2.picks('spock');
         expect(game.winner()).toBe(player1);
@@ -58,7 +58,7 @@ describe("Rock-Paper-Scissors", function() {
         expect(game.winner()).toBe(player2);
       });
 
-      xit('should lose to lizard', function() {
+      it('should lose to lizard', function() {
         player1.picks('paper');
         player2.picks('lizard');
         expect(game.winner()).toBe(player2);
@@ -73,7 +73,7 @@ describe("Rock-Paper-Scissors", function() {
         expect(game.winner()).toBe(player1);
       });
 
-      xit('should beat lizard', function() {
+      it('should beat lizard', function() {
         player1.picks('scissors');
         player2.picks('lizard');
         expect(game.winner()).toBe(player1);
@@ -85,7 +85,7 @@ describe("Rock-Paper-Scissors", function() {
         expect(game.winner()).toBe(player2);
       });
 
-      xit('should lose to spock', function() {
+      it('should lose to spock', function() {
         player1.picks('scissors');
         player2.picks('spock');
         expect(game.winner()).toBe(player2);
@@ -95,25 +95,25 @@ describe("Rock-Paper-Scissors", function() {
 
     describe('lizard', function() {
 
-      xit('should beat paper', function() {
+      it('should beat paper', function() {
         player1.picks('lizard');
         player2.picks('paper');
         expect(game.winner()).toBe(player1);
       });
 
-      xit('should beat spock', function() {
+      it('should beat spock', function() {
         player1.picks('lizard');
         player2.picks('spock');
         expect(game.winner()).toBe(player1);
       });
 
-      xit('should lose to rock', function() {
+      it('should lose to rock', function() {
         player1.picks('lizard');
         player2.picks('rock');
         expect(game.winner()).toBe(player2);
       });
 
-      xit('should lose to scissors', function() {
+      it('should lose to scissors', function() {
         player1.picks('lizard');
         player2.picks('scissors');
         expect(game.winner()).toBe(player2);
@@ -123,25 +123,25 @@ describe("Rock-Paper-Scissors", function() {
 
     describe('spock', function() {
 
-      xit('should beat rock', function() {
+      it('should beat rock', function() {
         player1.picks('spock');
         player2.picks('rock');
         expect(game.winner()).toBe(player1);
       });
 
-      xit('should beat scissors', function() {
+      it('should beat scissors', function() {
         player1.picks('spock');
         player2.picks('scissors');
         expect(game.winner()).toBe(player1);
       });
 
-      xit('should lose to paper', function() {
+      it('should lose to paper', function() {
         player1.picks('spock');
         player2.picks('paper');
         expect(game.winner()).toBe(player2);
       });
 
-     xit('should lose to lizard', function() {
+     it('should lose to lizard', function() {
         player1.picks('spock');
         player2.picks('lizard');
         expect(game.winner()).toBe(player2);
@@ -170,12 +170,17 @@ describe("Rock-Paper-Scissors", function() {
 
   describe('victory messages', function() {
 
-    xit("should return the winner's name, the verb and the loser's name", function() {
+    it("should return the winner's name, the verb and the loser's name", function() {
       player1.picks('scissors');
       player2.picks('rock');
-      expect(game.winningMessage()).toEqual('Alex crushes Mario');
+      expect(game.endMessage()).toEqual('Alex crushes Mario');
     });
 
+    it("return a draw in the event of a draw", function() {
+      player1.picks('rock');
+      player2.picks('rock');
+      expect(game.endMessage()).toEqual('Draw');
+    });
   });
 
 });
