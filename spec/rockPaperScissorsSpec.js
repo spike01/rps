@@ -173,7 +173,7 @@ describe("Rock-Paper-Scissors", function() {
     it("should return the winner's name, the verb and the loser's name", function() {
       player1.picks('scissors');
       player2.picks('rock');
-      expect(game.endMessage()).toEqual('Alex crushes Mario');
+      expect(game.endMessage()).toEqual('Alex\'s rock crushes Mario\'s scissors');
     });
 
     it("return a draw in the event of a draw", function() {
