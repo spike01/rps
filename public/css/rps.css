@@ -11,10 +11,13 @@ h1 {
   margin-bottom: 5%;
 }
 
+
 li {
   background: rgba(255,255,255,0.2);
-  width: 94%;
-  border-radius: 40px;
+  width: 25%;
+  border-radius: 13px;
+  margin: auto;
+  padding: 5px;
 }
 
 .picks img {
@@ -33,6 +36,7 @@ li {
 
 .result {
   text-align: center;
+  list-style: none;
 }
   
 
