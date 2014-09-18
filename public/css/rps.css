@@ -39,4 +39,8 @@ li {
   list-style: none;
 }
   
-
+.name_input {
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+}

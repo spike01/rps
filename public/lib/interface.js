@@ -15,7 +15,7 @@ $(document).ready(function() {
   $('.name_input').on('submit', function(e) {
     e.preventDefault();
     player1.name = $('input.playername').val()
-    $('.name_input').remove();
+    $('.name_input').fadeOut(500);
     
   });
 
